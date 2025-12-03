@@ -10,45 +10,27 @@
   <main class="app">
     <header>
       <h1>Historia wpisów</h1>
-      <p>Lista logów przygotowana do wstrzykiwania danych z serwera lub JSON.</p>
+      <p>Lista logów pobierana i zapisywana po stronie serwera.</p>
     </header>
 
     <section class="log-panel">
-      <ul id="log-list" aria-live="polite">
-        <li class="entry incoming">
-          <div class="bubble">
-            <div class="meta">
-              <span class="user">System</span>
-              <time datetime="2024-05-01T12:00">12:00</time>
-            </div>
-            <p class="message">Przykładowy wpis w historii.</p>
-          </div>
-        </li>
-        <li class="entry outgoing">
-          <div class="bubble">
-            <div class="meta">
-              <span class="user">Ty</span>
-              <time datetime="2024-05-01T12:02">12:02</time>
-            </div>
-            <p class="message">Dzięki za informację!</p>
-          </div>
-        </li>
-      </ul>
+      <ul id="log-list" aria-live="polite"></ul>
     </section>
 
     <section class="composer" aria-label="Dodaj wpis">
       <form>
         <label>
           Użytkownik
-          <input type="text" name="user" placeholder="Podaj nazwę" required>
+          <input type="text" name="user" placeholder="Podaj nazwę" maxlength="50" required>
         </label>
         <label>
           Wiadomość
-          <textarea name="message" rows="3" placeholder="Dodaj wiadomość" required></textarea>
+          <textarea name="message" rows="3" placeholder="Dodaj wiadomość" maxlength="500" required></textarea>
         </label>
         <button type="submit">Wyślij</button>
       </form>
     </section>
   </main>
+  <script type="module" src="app.js"></script>
 </body>
 </html>

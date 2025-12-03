@@ -1,0 +1,11 @@
+{
+  "name": "thelog",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Simple log board with server-backed entries",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node -e \"console.log('No automated tests configured')\""
+  }
+}
